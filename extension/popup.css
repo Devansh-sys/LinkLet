@@ -1,0 +1,177 @@
+:root {
+  color-scheme: light;
+  font: 14px/1.45 system-ui, sans-serif;
+  color: #17212b;
+  background: #f5f7fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+}
+
+main {
+  padding: 16px;
+}
+
+header,
+.section-title,
+.server-row,
+.send-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+header {
+  margin-bottom: 14px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+#status,
+.hint {
+  color: #526170;
+  font-size: 12px;
+}
+
+section,
+#server-form {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #dce3ea;
+  border-radius: 8px;
+  background: #fff;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  min-width: 0;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #b9c5d0;
+  border-radius: 5px;
+  color: inherit;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 8px 11px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  background: #1769aa;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+button.quiet {
+  padding: 5px 7px;
+  color: #34495e;
+  background: #e8edf2;
+  font-size: 12px;
+}
+
+.server-row input {
+  flex: 1;
+}
+
+.hint {
+  margin-top: 5px;
+}
+
+#pairing > p {
+  margin: 6px 0 10px;
+  color: #526170;
+}
+
+.code {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #173a56;
+  background: #e8f3fb;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+#messages {
+  display: flex;
+  max-height: 260px;
+  flex-direction: column;
+  gap: 7px;
+  overflow: auto;
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.message {
+  max-width: 90%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.message.in {
+  align-self: flex-start;
+  background: #edf1f5;
+}
+
+.message.out {
+  align-self: flex-end;
+  color: #fff;
+  background: #1769aa;
+}
+
+.message time {
+  display: block;
+  margin-top: 3px;
+  font-size: 10px;
+  opacity: 0.72;
+}
+
+#send-form {
+  padding-top: 10px;
+  border-top: 1px solid #e5e9ed;
+}
+
+.send-row {
+  margin-top: 7px;
+}

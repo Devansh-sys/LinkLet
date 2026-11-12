@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LinkLet</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>LinkLet</h1>
+          <p id="status" role="status">Connecting to your server…</p>
+        </div>
+        <button id="disconnect" class="quiet" type="button" hidden>Disconnect</button>
+      </header>
+
+      <form id="server-form">
+        <label for="server-url">LinkLet server</label>
+        <div class="server-row">
+          <input id="server-url" type="url" required autocomplete="url">
+          <button type="submit">Save</button>
+        </div>
+        <p class="hint">Remote servers must use HTTPS. Local development may use HTTP.</p>
+      </form>
+
+      <section id="pairing" aria-labelledby="pairing-title">
+        <h2 id="pairing-title">Connect Telegram</h2>
+        <p>Start pairing, then send the code to your LinkLet bot in Telegram.</p>
+        <button id="start-pairing" type="button">Start pairing</button>
+        <div id="pairing-code" class="code" hidden></div>
+      </section>
+
+      <section id="conversation" aria-labelledby="conversation-title" hidden>
+        <div class="section-title">
+          <h2 id="conversation-title">Messages</h2>
+          <button id="clear-messages" class="quiet" type="button">Clear history</button>
+        </div>
+        <ol id="messages" aria-live="polite"></ol>
+        <form id="send-form">
+          <label for="message-text">Send a Telegram message</label>
+          <textarea id="message-text" rows="3" maxlength="4096" required></textarea>
+          <div class="send-row">
+            <span id="character-count" class="hint">0 / 4096</span>
+            <button id="send-button" type="submit">Send</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="api.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // Where TypeScript source lives and compiled JS goes
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Module system: "nodenext" makes tsc read package.json's "type"
+    // and emit whatever Node expects (CommonJS for this project)
+    "module": "nodenext",
+    "target": "es2022",
+    "lib": ["es2022"],
+
+    // Node globals (process, console, __dirname, ...) come from @types/node
+    "types": ["node"],
+
+    // Type-checking strength
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Debuggability
+    "sourceMap": true
+  },
+  "include": ["src"]
+}
